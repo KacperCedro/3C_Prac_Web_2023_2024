@@ -1,0 +1,19 @@
+zadanie 5:
+
+Instrukcja switch jest lepszym wyborem, poniewż przy menu 
+najczęściej przesyłanym argumentem jest nazwa lub numer przycisku.
+Instrukcja switch porównuje wartości dla jednej zmiennej i nie wymaga 
+dodawania innych konstrukcji. Dzięki instrukcji switch w tym prypadku 
+można wygodniej zaimplementować gotowy algorytm dla sprawdzania jednej 
+zmiennej (np sender przysisku).
+
+zadanie 1:
+    C
+zadanie 2:
+    A
+zadanie 3:
+    B
+zadanie 4:
+    C
+zadanie 5:
+    A
