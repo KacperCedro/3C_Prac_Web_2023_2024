@@ -16,14 +16,10 @@
             $aMinusB = (($a - $b) > 0) ? (($a - $b) * 1) : (($a - $b) * (-1));
             while($aMinusB > $Ex){
                 $Xo = Xby0($a, $b);
-<<<<<<< HEAD
-
-=======
-                $Fo = FunctionToCalcualte($Fo);
+                $Fo = FunctionToCalcualte($Xo);
                 $FoAbsolute = ($Fo > 0) ? ($Fo * 1) : ($Fo * (-1));
                 if ($FoAbsolute < $Eo ) {
                     break;
->>>>>>> deb625447911be1843e31b0217441268a090b2b6
                 }
                 elseif(($Fa * $Fo) < 0){
                     $b = $Xo;
