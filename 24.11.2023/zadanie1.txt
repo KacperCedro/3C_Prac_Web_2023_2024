@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 
 W nowoczesnych rozbudowanych rozwiązaniach informatycznych (oprogramowaniu) stosuje się pętle.
 Pozwalają one na wykonywanie wielokrotne wybranych instrukcji zawierahjących się w ich wnętrzu.
 Dzięki pętlom można budować skomplikowane interfehjsy urzytkownika, prowadzić skomplikowane obliczenia i wiele innych.
 Wykożystywanie pętli może ograniczyć ilość instrukcji warunkowych (DRY).
->>>>>>> deb625447911be1843e31b0217441268a090b2b6
