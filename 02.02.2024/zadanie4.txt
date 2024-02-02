@@ -1,0 +1,2 @@
+post: http://localhost/02.02.2024/zadanie3/formResult.php
+get: http://localhost/02.02.2024/zadanie2/formResult.php?imie=vVD&nazwisko=sdvdv&wyslij=Wy%C5%9Blij

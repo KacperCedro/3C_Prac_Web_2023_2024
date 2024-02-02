@@ -1,0 +1,11 @@
+metoda get: 
+    wady:
+        widoczne danie w adresie url
+    zalety:
+        może być wykożystymany w wyszukiwamiach i akcjach które nie wymagają szyfrowania danych
+metoda post:
+    wady:
+        brak ingerencji w samo zapytanie
+    zalety:
+        dane szyfrowane i niedostępne z zewnąrz
+
