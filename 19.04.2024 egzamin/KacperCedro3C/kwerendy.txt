@@ -1,0 +1,4 @@
+Select uzytkownicy.haslo FROM uzytkownicy where uzytkownicy.login = "Justyna";
+Select COUNT(dane.id) FROM dane;
+Select uzytkownicy.login, dane.rok_urodz, dane.przyjaciol, dane.hobby, dane.zdjecie FROM uzytkownicy JOIN dane ON dane.id = uzytkownicy.id WHERE uzytkownicy.login = "Justyna";
+ALTER TABLE dane ADD COLUMN stanowisko varchar(255);
