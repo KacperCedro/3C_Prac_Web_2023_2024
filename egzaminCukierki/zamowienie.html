@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl10.css">
+    <title>Fabryka cukierków</title>
+</head>
+<body>
+    
+    <div id="leftTop">
+        <a href="zamowienie.html">Zamów cukierki</a>
+    </div>
+    <div id="rightTop">
+        <a href="index.html"><img src="logotyp.png" alt="Nasze logo"></a>
+    </div>
+    
+    <div id="banner">
+        <h1>Strefa zamównień</h1>
+    </div>
+    <div id="left">
+        Numer kształtu:
+            <br>
+            <input type="number" id="type">
+            <br>
+            Skomponuj swój kolor, podaj RGB:
+            <br> 
+            R: 
+            <input type="number" id="R">
+            G: 
+            <input type="number" id="G">
+            B: 
+            <input type="number" id="B">
+            <br>
+            <input type="button" value="Zamówienie" onclick="run()" >
+            <br>
+            <br>
+            <p id="orderSweets">Twoje zamówienie</p>
+            <br>
+            <p id="paragraph">
+
+            </p>
+            <br>
+            <input type="button" value="Kolor" id="colorButton">
+    </div>
+    <div id="right">
+        <h2>
+            Nasza oferta
+        </h2>
+        <br>
+        <table>
+            <tr>
+                <td>Kształty</td>
+                <td rowspan="2">Możesz zamówić <br> dowolny kolor cukierka</td>
+            </tr>   
+            <tr>
+                <td>
+                    <ol>
+                        <li>cytryna</li>
+                        <li>liść</li>
+                        <li>banan</li>
+                    </ol>
+                </td>
+            </tr>   
+        </table>
+    </div>
+    <footer>
+        Autor strony: <b>Kacper Cedro</b>
+    </footer>
+
+    <script>
+        function run() {
+            var type = document.getElementById("type").value
+            var rColor = document.getElementById("R").value
+            var gColor = document.getElementById("G").value
+            var bColor = document.getElementById("B").value
+            var paragraph = document.getElementById("paragraph")
+            var button = document.getElementById("colorButton")
+
+            function getOrder() {
+                var shape = ""
+                if (type == 1) {
+                    shape = "cytryna"
+                }
+                else if (type == 2) {
+                    shape = "liść"
+                }
+                else if (type == 3) {
+                    shape = "banan"
+                }
+                else{
+                    shape = "inny"
+                }
+
+                paragraph.innerText = "Twoje zamówienie to cukierek " + shape
+            }
+            function setButtonColor() {
+                button.style.backgroundColor = "rgb(" + rColor + ", " + gColor + ", " + bColor + ")"
+            }
+
+            getOrder()
+            setButtonColor()
+        }
+    </script>
+</body>
+</html>
