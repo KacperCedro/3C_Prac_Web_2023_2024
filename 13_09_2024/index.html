@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <form>
+                Enter your name:
+                <br>
+                <input type="text" name="name" id="name">
+                <br>
+                Enter your surname:
+                <br>
+                <input type="text" name="surname" id="surname">
+                <br>
+                Enter your phone number:
+                <br>
+                <input type="tel" name="tel" id="tel">
+                <br>
+                Enter password:
+                <br>
+                <input type="password" name="password" id="password">
+                <br>
+                Enter the password again:
+                <br>
+                <input type="password" name="password2" id="password2">
+                <br>
+                Enter your age:
+                <br>
+                <input type="number" name="age" id="age">
+                <br>
+                Enter colour:
+                <br>
+                <input type="color" name="color" id="color">
+                <br>
+                Our privacy policy:
+                <input type="checkbox" name="policy" id="policy">
+                <br>
+                <p id="info">
+                </p>
+                <br>
+                <input type="button" value="send data" onclick="Run()">
+            </form>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+</body>
+<script>
+    function Run() {
+        var name = document.getElementById('name').value
+        var surname = document.getElementById('surname').value
+        var tel = document.getElementById('tel').value
+        var password1 = document.getElementById('password').value
+        var password2 = document.getElementById('password2').value
+        var age = document.getElementById('age').value
+        var color = document.getElementById('color').value
+        var policy = document.getElementById('policy').checked
+        var p = document.getElementById('info')
+        var div = document.getElementsByClassName('right').innerText
+
+        if (password1 != password2) {
+            p.innerText = "passwords should be the same"
+            console.log("1")
+            return
+        }
+        else if (password1 == "") {
+            p.innerText = "enter password"
+            return
+        }
+        else if (age < 18) {
+            p.innerText = "you too young - get older"
+            console.log("2")
+            return
+        }
+        else if (policy != true) {
+            p.innerText = "check policy"
+            console.log("3")
+            return
+        }
+        else{
+            p.innerText = ""
+
+            document.body.style.background = color;
+        }
+
+}
+</script>
+</html>
