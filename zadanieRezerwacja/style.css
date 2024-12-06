@@ -1,0 +1,51 @@
+.section_view{
+    width: 450px;
+    height: 400px;
+    border-radius: 20px;
+    border-color: crimson;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.right{
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    
+}
+.top{
+    flex-direction: row;
+}
+.bottom{
+    flex-direction: row;
+    align-self: end;
+}
+.middle{
+    
+    align-items: center;
+}
+button{
+    width: 40px;
+    height: 40px;
+    border-color: crimson;
+    border-radius: 10px;
+    margin: 5px;
+}
+form{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
