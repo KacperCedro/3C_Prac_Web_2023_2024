@@ -1,51 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Routes, Route, Link, NavLink} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, NavLink, createBrowserRouter, RouterProvider} from "react-router-dom";
 import { Home } from "./Home";
-import Products from './Products';
+import Products, {loader as productLoader} from './Products';
 import Cart from "./Cart";
 import ErrorPage from './ErrorPage';
 import Admin from './Admin';
-import ProductDetails from './ProductDetails';
+import ProductDetails, {loader as productDetailsLoader} from './ProductDetails';
+import Layout from './Layout';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout/>,
+    children:[
+      {index: true, element: <Home/>},
+      {path: 'products', element: <Products/>, loader: productLoader},
+      {path: 'products/:id', element: <ProductDetails/>, loader: productLoader},
+      {path: '*', element: <ErrorPage/>},
+      {path: 'cart', element: <Cart/>},
+      {path: 'admin', element: <Admin/>},
+    ],
+  },
+])
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-      <header className="App-header">
-        <h1 className='App-header-h1'>
-          LidlRonka
-        </h1>
-      </header>
-      <nav className='App-nav'>
-        <NavLink to={"/"}>Home</NavLink> | {" "}
-        <NavLink to={'/products'}>Products</NavLink> | {""}
-        <NavLink to={'/cart'}>Cart</NavLink> | {" "}
-        <NavLink to={'/admin'}>Panel administracji</NavLink>
-      </nav>
-      <section className='App-section'>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/products' element={<Products/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='*' element={<ErrorPage/>}/>
-        <Route path='/admin' element={<Admin/>}/>
-        <Route path='/products/:id' element={<ProductDetails/>}/>
-      </Routes>
-      </section>
-      <footer className='App-footer'>
-        <p>
-          Kontakt:
-          <br/>
-          Lidl.Bierdonka@MAUI.com
-          <br/>
-          +72 455 64 45 55
-        </p>
-
-      </footer>
-    </div>
-      
-    </BrowserRouter>
+    <RouterProvider router={router}/>
   );
 }
 
